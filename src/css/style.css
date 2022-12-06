@@ -114,10 +114,13 @@ header .right .perfil ul .seletor-de-perfis a {
 #hero {
   position: absolute;
   background-color: orange;
-  min-height: 70vh;
+  min-height: 100vh;
   min-width: 100vw;
   top: 0;
   left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
   z-index: -1;
 }
 
