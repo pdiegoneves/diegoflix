@@ -8,4 +8,44 @@
     background-size: cover
     background-repeat: no-repeat
     background-position: top center
-    z-index: -1
+    .hero-infos
+        position: absolute
+        top: 50%
+        left: 5%
+        width: 600px
+        height: 200px
+        transform: translateY(-50%)
+
+        .title-hero
+            color: #fff
+            font-size: 50px
+            font-family: 'Cinzel', serif
+            width: 2000px
+        .group-hero-buttons
+            @at-root 
+                .hero-button
+                    font-family: 'Netflix Sans Medium'
+                    font-size: 18px
+                    padding: 12px 20px
+                    border-radius: 6px
+                    border: none
+                    outline: none
+                    cursor: pointer
+                    transition: 0.3s
+                    &.assitir
+                        &:hover
+                            background-color: rgba(255,255,255,.5)
+                    &.mais-info
+                        color: #fff
+                        background-color: rgba(0,0,0, 0.5)
+                        margin-left: 10px
+                        &:hover
+                            background-color: rgba(0,0,0, 0.4)
+
+        .sinopse-hero
+            font-family: 'Netflix Sans Regular'
+            color: #fff
+            font-weight: 500
+            margin: 20px 0
+        
+

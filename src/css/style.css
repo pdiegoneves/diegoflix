@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@500&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:wght@700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -57,27 +57,26 @@ table {
   font-family: "Netflix Sans Regular";
   src: url("/assets/fonts/NetflixSansRegular.ttf") format("truetype");
 }
+.hovered {
+  opacity: 0.9;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .logo {
   font-family: "Bebas Neue", cursive;
   font-size: 1.9em;
   color: #E50914;
   position: relative;
 }
-.logo::before {
-  content: "";
-  width: 100%;
-  height: 27%;
-  background-color: rgb(20, 20, 20);
-  position: absolute;
-  bottom: 0;
-  border-radius: 50% 50% 0 0;
-}
 
 header {
+  position: relative;
   display: flex;
   align-items: center;
   height: 70px;
   gap: 50px;
+  z-index: 100;
 }
 header .right {
   width: 100%;
@@ -121,7 +120,92 @@ header .right .perfil ul .seletor-de-perfis a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-  z-index: -1;
+}
+#hero .hero-infos {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 600px;
+  height: 200px;
+  transform: translateY(-50%);
+}
+#hero .hero-infos .title-hero {
+  color: #fff;
+  font-size: 50px;
+  font-family: "Cinzel", serif;
+  width: 2000px;
+}
+.hero-button {
+  font-family: "Netflix Sans Medium";
+  font-size: 18px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.hero-button.assitir:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.hero-button.mais-info {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-left: 10px;
+}
+.hero-button.mais-info:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#hero .hero-infos .sinopse-hero {
+  font-family: "Netflix Sans Regular";
+  color: #fff;
+  font-weight: 500;
+  margin: 20px 0;
+}
+
+.row, #rowtops {
+  display: flex;
+  position: absolute;
+  bottom: -15%;
+  left: 0;
+  min-width: 100vw;
+  height: 250px;
+  padding-left: 5%;
+}
+.row .row-title, #rowtops .row-title {
+  position: absolute;
+  font-family: "Netflix Sans Medium";
+  color: #fff;
+  font-size: 20px;
+}
+.row .card, #rowtops .card {
+  position: relative;
+  margin-top: 30px;
+  display: flex;
+}
+.row .card .card-number, #rowtops .card .card-number {
+  margin-top: -45px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 320px;
+  text-shadow: 2px 0 #ccc, -2px 0 #ccc, 0 2px #ccc, 0 -2px #ccc, 1px 1px #ccc, -1px -1px #ccc, 1px -1px #ccc, -1px 1px #ccc;
+}
+.row .card .card-cover, #rowtops .card .card-cover {
+  width: 150px;
+  height: 250px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-left: -60px;
+}
+.row .card .card-title, #rowtops .card .card-title {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+  font-size: 18px;
+  width: 100px;
 }
 
 html {
@@ -133,6 +217,7 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   font-family: "Netflix Sans Regular";
+  overflow-x: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
