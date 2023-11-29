@@ -1,7 +1,7 @@
 const doc = document
 const rowTops = doc.getElementById('rowtops')
 
-const API_KEY = 'a8917691c1e73fa663f848a0e1f2e239'
+const API_KEY = 'ad82b8c14eb998df2dd8dff78b386565'
 const API_URL = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API_KEY}&page=1&language=pt-BR`
 const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'
 const SEARCH_API = `https://api.themoviedb.org/3/search/movie?&api_key=${API_KEY}&language=pt-BR&query="`
